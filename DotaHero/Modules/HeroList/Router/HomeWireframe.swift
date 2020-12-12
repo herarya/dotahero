@@ -18,17 +18,20 @@ class HomeWireframe: HomeWireframeProtocol{
     // MARK: - Methods
     
     class func createModule() -> UIViewController {
+        guard let localDbManager = (UIApplication.shared.delegate as? AppDelegate)?.localDataManager else { fatalError("error get db") }
         let view = HeroListViewController()
         let service = HeroesService()
-        let interactor = HeroListInteractor(service: service)
+        let interactor = HeroListInteractor(localDbManager: localDbManager, service: service)
         let presenter = HeroListPresenter(interactor: interactor, view: view)
         let navigation = UINavigationController(rootViewController: view)
         view.presenter = presenter
         presenter.view = view
         return navigation
     }
+
     
     static var mainstoryboard: UIStoryboard {
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
 }
+

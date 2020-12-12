@@ -20,6 +20,11 @@
 		DF27034A2584737E00643032 /* HeroListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703492584737E00643032 /* HeroListInteractor.swift */; };
 		DF27034C2584755D00643032 /* HeroListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27034B2584755D00643032 /* HeroListPresenter.swift */; };
 		DF27035125847C0100643032 /* HeroViewListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27035025847C0100643032 /* HeroViewListProtocol.swift */; };
+		DF2703532584805C00643032 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703522584805C00643032 /* HeroModel.swift */; };
+		DF2703562584BAA600643032 /* HeroRoleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703542584BAA600643032 /* HeroRoleCollectionViewCell.swift */; };
+		DF2703572584BAA600643032 /* HeroRoleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2703552584BAA600643032 /* HeroRoleCollectionViewCell.xib */; };
+		DF27035A2584BBD700643032 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703582584BBD700643032 /* HeroCollectionViewCell.swift */; };
+		DF27035B2584BBD700643032 /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2703592584BBD700643032 /* HeroCollectionViewCell.xib */; };
 		DFCE8DED2583C51000FCA8C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */; };
 		DFCE8DF72583C51000FCA8C2 /* DotaHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */; };
 		DFCE8DF92583C51200FCA8C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */; };
@@ -64,6 +69,11 @@
 		DF2703492584737E00643032 /* HeroListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListInteractor.swift; sourceTree = "<group>"; };
 		DF27034B2584755D00643032 /* HeroListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListPresenter.swift; sourceTree = "<group>"; };
 		DF27035025847C0100643032 /* HeroViewListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewListProtocol.swift; sourceTree = "<group>"; };
+		DF2703522584805C00643032 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		DF2703542584BAA600643032 /* HeroRoleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRoleCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF2703552584BAA600643032 /* HeroRoleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroRoleCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF2703582584BBD700643032 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF2703592584BBD700643032 /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFCE8DE92583C51000FCA8C2 /* DotaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCE8DF62583C51000FCA8C2 /* DotaHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DotaHero.xcdatamodel; sourceTree = "<group>"; };
@@ -135,6 +145,10 @@
 			children = (
 				DF27033A25844E3300643032 /* HeroListViewController.swift */,
 				DF27033B25844E3300643032 /* HeroListViewController.xib */,
+				DF2703542584BAA600643032 /* HeroRoleCollectionViewCell.swift */,
+				DF2703582584BBD700643032 /* HeroCollectionViewCell.swift */,
+				DF2703552584BAA600643032 /* HeroRoleCollectionViewCell.xib */,
+				DF2703592584BBD700643032 /* HeroCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +156,8 @@
 		DF27033325844BB900643032 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */,
+				DF2703522584805C00643032 /* HeroModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -237,7 +253,6 @@
 				DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */,
 				DFCE8DFA2583C51200FCA8C2 /* LaunchScreen.storyboard */,
 				DFCE8DFD2583C51200FCA8C2 /* Info.plist */,
-				DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */,
 			);
 			path = DotaHero;
 			sourceTree = "<group>";
@@ -396,6 +411,8 @@
 				DFCE8DF92583C51200FCA8C2 /* Assets.xcassets in Resources */,
 				DFCE8E2B2583D38C00FCA8C2 /* Main.storyboard in Resources */,
 				DF27033D25844E3300643032 /* HeroListViewController.xib in Resources */,
+				DF27035B2584BBD700643032 /* HeroCollectionViewCell.xib in Resources */,
+				DF2703572584BAA600643032 /* HeroRoleCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,9 +545,12 @@
 				DF27033C25844E3300643032 /* HeroListViewController.swift in Sources */,
 				DF2703482584582C00643032 /* HeroService.swift in Sources */,
 				DFCE8DED2583C51000FCA8C2 /* AppDelegate.swift in Sources */,
+				DF2703532584805C00643032 /* HeroModel.swift in Sources */,
 				DF27033825844D3400643032 /* HomeWireframe.swift in Sources */,
 				DFCE8DF72583C51000FCA8C2 /* DotaHero.xcdatamodeld in Sources */,
+				DF27035A2584BBD700643032 /* HeroCollectionViewCell.swift in Sources */,
 				DF27035125847C0100643032 /* HeroViewListProtocol.swift in Sources */,
+				DF2703562584BAA600643032 /* HeroRoleCollectionViewCell.swift in Sources */,
 				DF270340258450D900643032 /* Endpoint.swift in Sources */,
 				DF27034C2584755D00643032 /* HeroListPresenter.swift in Sources */,
 				DF27034A2584737E00643032 /* HeroListInteractor.swift in Sources */,

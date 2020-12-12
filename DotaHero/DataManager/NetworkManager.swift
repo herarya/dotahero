@@ -19,9 +19,9 @@ class NetworkManager{
        AF.request(url).validate().responseData { response in
            switch response.result {
            case let .success(data):
-             print(data)
+             completion?(data,nil)
            case let .failure(error):
-            print(error)
+             completion?(nil,error)
            }
        }
     }

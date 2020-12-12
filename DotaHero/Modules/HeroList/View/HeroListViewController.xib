@@ -7,8 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DotaHero" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroListViewController" customModule="DotaHero" customModuleProvider="target">
             <connections>
+                <outlet property="heroCollectionView" destination="imq-Qe-tZV" id="UwT-6X-BS5"/>
+                <outlet property="heroRoleCollectionView" destination="05T-nk-wp0" id="Kdc-NE-aXJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,20 +19,42 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-Mz-pcQ">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="05T-nk-wp0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZGN-8Q-326"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZvD-Pb-8t3">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="imq-Qe-tZV">
+                    <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                    <color key="backgroundColor" red="0.0078431372550000003" green="0.72156862749999995" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HSV-sV-2nO">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="8e9-Mz-pcQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XXO-1P-xdl"/>
-                <constraint firstItem="8e9-Mz-pcQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cku-ef-b0U"/>
+                <constraint firstItem="05T-nk-wp0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4ES-Yg-aqq"/>
+                <constraint firstItem="imq-Qe-tZV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="76I-CB-tIe"/>
+                <constraint firstAttribute="bottom" secondItem="imq-Qe-tZV" secondAttribute="bottom" id="Q8E-d7-GjW"/>
+                <constraint firstItem="05T-nk-wp0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U4h-xA-CSy"/>
+                <constraint firstItem="imq-Qe-tZV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZVZ-f6-4jZ"/>
+                <constraint firstItem="05T-nk-wp0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iis-z1-yJh"/>
+                <constraint firstItem="imq-Qe-tZV" firstAttribute="top" secondItem="05T-nk-wp0" secondAttribute="bottom" constant="10" id="yxX-dr-9Qg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="-172.46376811594203" y="143.97321428571428"/>
         </view>
     </objects>
 </document>

@@ -11,11 +11,13 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+    private(set) var localDataManager: LocalDataManager?
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        localDataManager = LocalDataManager(persistentContainer: persistentContainer)
         
         let rootVc = HomeWireframe.createModule()
         window = UIWindow(frame: UIScreen.main.bounds)
