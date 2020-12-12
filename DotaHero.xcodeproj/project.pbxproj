@@ -3,19 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07236182FBC6F6FA97B8559A /* Pods_DotaHeroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5070ABE4B70F9B7B682475F1 /* Pods_DotaHeroTests.framework */; };
+		7237C74BB8AECF92B1873193 /* Pods_DotaHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2740EFA00FE460FEB698C0 /* Pods_DotaHero.framework */; };
+		7F79B8F7BCF3067C39ABDD46 /* Pods_DotaHero_DotaHeroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC666D4F216565C35523F720 /* Pods_DotaHero_DotaHeroUITests.framework */; };
+		DF27033825844D3400643032 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27033725844D3400643032 /* HomeWireframe.swift */; };
+		DF27033C25844E3300643032 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27033A25844E3300643032 /* HeroListViewController.swift */; };
+		DF27033D25844E3300643032 /* HeroListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF27033B25844E3300643032 /* HeroListViewController.xib */; };
+		DF270340258450D900643032 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27033F258450D900643032 /* Endpoint.swift */; };
+		DF2703432584519300643032 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703422584519300643032 /* NetworkManager.swift */; };
+		DF270345258451A300643032 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF270344258451A300643032 /* LocalDataManager.swift */; };
+		DF2703482584582C00643032 /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703472584582C00643032 /* HeroService.swift */; };
+		DF27034A2584737E00643032 /* HeroListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703492584737E00643032 /* HeroListInteractor.swift */; };
+		DF27034C2584755D00643032 /* HeroListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27034B2584755D00643032 /* HeroListPresenter.swift */; };
+		DF27035125847C0100643032 /* HeroViewListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27035025847C0100643032 /* HeroViewListProtocol.swift */; };
 		DFCE8DED2583C51000FCA8C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */; };
-		DFCE8DEF2583C51000FCA8C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DEE2583C51000FCA8C2 /* SceneDelegate.swift */; };
-		DFCE8DF12583C51000FCA8C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DF02583C51000FCA8C2 /* ViewController.swift */; };
-		DFCE8DF42583C51000FCA8C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8DF22583C51000FCA8C2 /* Main.storyboard */; };
 		DFCE8DF72583C51000FCA8C2 /* DotaHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */; };
 		DFCE8DF92583C51200FCA8C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */; };
 		DFCE8DFC2583C51200FCA8C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8DFA2583C51200FCA8C2 /* LaunchScreen.storyboard */; };
 		DFCE8E072583C51200FCA8C2 /* DotaHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8E062583C51200FCA8C2 /* DotaHeroTests.swift */; };
 		DFCE8E122583C51200FCA8C2 /* DotaHeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8E112583C51200FCA8C2 /* DotaHeroUITests.swift */; };
+		DFCE8E2B2583D38C00FCA8C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8E2A2583D38C00FCA8C2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +47,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C167BCD404DE124746DF164 /* Pods-DotaHeroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHeroTests.debug.xcconfig"; path = "Target Support Files/Pods-DotaHeroTests/Pods-DotaHeroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2836C5935615F5A4758DC923 /* Pods-DotaHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHero.release.xcconfig"; path = "Target Support Files/Pods-DotaHero/Pods-DotaHero.release.xcconfig"; sourceTree = "<group>"; };
+		28C3524390419061D3BD0B72 /* Pods-DotaHero-DotaHeroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHero-DotaHeroUITests.debug.xcconfig"; path = "Target Support Files/Pods-DotaHero-DotaHeroUITests/Pods-DotaHero-DotaHeroUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5070ABE4B70F9B7B682475F1 /* Pods_DotaHeroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaHeroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF19D5ACC65242A0673D11F /* Pods-DotaHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHero.debug.xcconfig"; path = "Target Support Files/Pods-DotaHero/Pods-DotaHero.debug.xcconfig"; sourceTree = "<group>"; };
+		846FAFC981F9218864FE86C1 /* Pods-DotaHero-DotaHeroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHero-DotaHeroUITests.release.xcconfig"; path = "Target Support Files/Pods-DotaHero-DotaHeroUITests/Pods-DotaHero-DotaHeroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF2740EFA00FE460FEB698C0 /* Pods_DotaHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF27033725844D3400643032 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		DF27033A25844E3300643032 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
+		DF27033B25844E3300643032 /* HeroListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListViewController.xib; sourceTree = "<group>"; };
+		DF27033F258450D900643032 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DF2703422584519300643032 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DF270344258451A300643032 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		DF2703472584582C00643032 /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
+		DF2703492584737E00643032 /* HeroListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListInteractor.swift; sourceTree = "<group>"; };
+		DF27034B2584755D00643032 /* HeroListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListPresenter.swift; sourceTree = "<group>"; };
+		DF27035025847C0100643032 /* HeroViewListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewListProtocol.swift; sourceTree = "<group>"; };
 		DFCE8DE92583C51000FCA8C2 /* DotaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFCE8DEE2583C51000FCA8C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFCE8DF02583C51000FCA8C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFCE8DF32583C51000FCA8C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFCE8DF62583C51000FCA8C2 /* DotaHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DotaHero.xcdatamodel; sourceTree = "<group>"; };
 		DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFCE8DFB2583C51200FCA8C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +76,9 @@
 		DFCE8E0D2583C51200FCA8C2 /* DotaHeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotaHeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCE8E112583C51200FCA8C2 /* DotaHeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaHeroUITests.swift; sourceTree = "<group>"; };
 		DFCE8E132583C51200FCA8C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFCE8E2A2583D38C00FCA8C2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC666D4F216565C35523F720 /* Pods_DotaHero_DotaHeroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaHero_DotaHeroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDD897BE190B278B3F9BE66B /* Pods-DotaHeroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaHeroTests.release.xcconfig"; path = "Target Support Files/Pods-DotaHeroTests/Pods-DotaHeroTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7237C74BB8AECF92B1873193 /* Pods_DotaHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07236182FBC6F6FA97B8559A /* Pods_DotaHeroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +102,107 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F79B8F7BCF3067C39ABDD46 /* Pods_DotaHero_DotaHeroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF27033025844B2D00643032 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DF27033125844B3900643032 /* HeroList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DF27033125844B3900643032 /* HeroList */ = {
+			isa = PBXGroup;
+			children = (
+				DF27034F25847BCC00643032 /* Protocols */,
+				DF27033625844BE200643032 /* Presenter */,
+				DF27033525844BD100643032 /* Interactor */,
+				DF27033425844BC500643032 /* Router */,
+				DF27033325844BB900643032 /* Entity */,
+				DF27033225844B4900643032 /* View */,
+			);
+			path = HeroList;
+			sourceTree = "<group>";
+		};
+		DF27033225844B4900643032 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF27033A25844E3300643032 /* HeroListViewController.swift */,
+				DF27033B25844E3300643032 /* HeroListViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF27033325844BB900643032 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DF27033425844BC500643032 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DF27033725844D3400643032 /* HomeWireframe.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DF27033525844BD100643032 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DF2703492584737E00643032 /* HeroListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DF27033625844BE200643032 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DF27034B2584755D00643032 /* HeroListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DF27033E258450B400643032 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DF27033F258450D900643032 /* Endpoint.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DF2703412584516B00643032 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DF2703422584519300643032 /* NetworkManager.swift */,
+				DF270344258451A300643032 /* LocalDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DF2703462584581600643032 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DF2703472584582C00643032 /* HeroService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DF27034F25847BCC00643032 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DF27035025847C0100643032 /* HeroViewListProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DFCE8DE02583C51000FCA8C2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +210,8 @@
 				DFCE8E052583C51200FCA8C2 /* DotaHeroTests */,
 				DFCE8E102583C51200FCA8C2 /* DotaHeroUITests */,
 				DFCE8DEA2583C51000FCA8C2 /* Products */,
+				E60FA1512CD3A000CCB947BD /* Pods */,
+				F1E59A1CD047921681A3FD98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +228,12 @@
 		DFCE8DEB2583C51000FCA8C2 /* DotaHero */ = {
 			isa = PBXGroup;
 			children = (
+				DF2703462584581600643032 /* Service */,
+				DF2703412584516B00643032 /* DataManager */,
+				DF27033E258450B400643032 /* Common */,
+				DF27033025844B2D00643032 /* Modules */,
+				DFCE8E2A2583D38C00FCA8C2 /* Main.storyboard */,
 				DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */,
-				DFCE8DEE2583C51000FCA8C2 /* SceneDelegate.swift */,
-				DFCE8DF02583C51000FCA8C2 /* ViewController.swift */,
-				DFCE8DF22583C51000FCA8C2 /* Main.storyboard */,
 				DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */,
 				DFCE8DFA2583C51200FCA8C2 /* LaunchScreen.storyboard */,
 				DFCE8DFD2583C51200FCA8C2 /* Info.plist */,
@@ -131,6 +260,29 @@
 			path = DotaHeroUITests;
 			sourceTree = "<group>";
 		};
+		E60FA1512CD3A000CCB947BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FF19D5ACC65242A0673D11F /* Pods-DotaHero.debug.xcconfig */,
+				2836C5935615F5A4758DC923 /* Pods-DotaHero.release.xcconfig */,
+				28C3524390419061D3BD0B72 /* Pods-DotaHero-DotaHeroUITests.debug.xcconfig */,
+				846FAFC981F9218864FE86C1 /* Pods-DotaHero-DotaHeroUITests.release.xcconfig */,
+				0C167BCD404DE124746DF164 /* Pods-DotaHeroTests.debug.xcconfig */,
+				FDD897BE190B278B3F9BE66B /* Pods-DotaHeroTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1E59A1CD047921681A3FD98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF2740EFA00FE460FEB698C0 /* Pods_DotaHero.framework */,
+				FC666D4F216565C35523F720 /* Pods_DotaHero_DotaHeroUITests.framework */,
+				5070ABE4B70F9B7B682475F1 /* Pods_DotaHeroTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCE8E162583C51200FCA8C2 /* Build configuration list for PBXNativeTarget "DotaHero" */;
 			buildPhases = (
+				04A9759D672C3DA87573CEE1 /* [CP] Check Pods Manifest.lock */,
 				DFCE8DE52583C51000FCA8C2 /* Sources */,
 				DFCE8DE62583C51000FCA8C2 /* Frameworks */,
 				DFCE8DE72583C51000FCA8C2 /* Resources */,
+				790A5442C3E62E4577C79FC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCE8E192583C51200FCA8C2 /* Build configuration list for PBXNativeTarget "DotaHeroTests" */;
 			buildPhases = (
+				4DA542419BB3ACF6B0D65237 /* [CP] Check Pods Manifest.lock */,
 				DFCE8DFE2583C51200FCA8C2 /* Sources */,
 				DFCE8DFF2583C51200FCA8C2 /* Frameworks */,
 				DFCE8E002583C51200FCA8C2 /* Resources */,
@@ -173,9 +328,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFCE8E1C2583C51200FCA8C2 /* Build configuration list for PBXNativeTarget "DotaHeroUITests" */;
 			buildPhases = (
+				CD71A5ABE160A390062D0771 /* [CP] Check Pods Manifest.lock */,
 				DFCE8E092583C51200FCA8C2 /* Sources */,
 				DFCE8E0A2583C51200FCA8C2 /* Frameworks */,
 				DFCE8E0B2583C51200FCA8C2 /* Resources */,
+				933CCDAAAFF5D1FD0D30B487 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +394,8 @@
 			files = (
 				DFCE8DFC2583C51200FCA8C2 /* LaunchScreen.storyboard in Resources */,
 				DFCE8DF92583C51200FCA8C2 /* Assets.xcassets in Resources */,
-				DFCE8DF42583C51000FCA8C2 /* Main.storyboard in Resources */,
+				DFCE8E2B2583D38C00FCA8C2 /* Main.storyboard in Resources */,
+				DF27033D25844E3300643032 /* HeroListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,15 +415,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04A9759D672C3DA87573CEE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotaHero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DA542419BB3ACF6B0D65237 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotaHeroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		790A5442C3E62E4577C79FC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaHero/Pods-DotaHero-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaHero/Pods-DotaHero-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotaHero/Pods-DotaHero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		933CCDAAAFF5D1FD0D30B487 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaHero-DotaHeroUITests/Pods-DotaHero-DotaHeroUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DotaHero-DotaHeroUITests/Pods-DotaHero-DotaHeroUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DotaHero-DotaHeroUITests/Pods-DotaHero-DotaHeroUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD71A5ABE160A390062D0771 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DotaHero-DotaHeroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFCE8DE52583C51000FCA8C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFCE8DF12583C51000FCA8C2 /* ViewController.swift in Sources */,
+				DF2703432584519300643032 /* NetworkManager.swift in Sources */,
+				DF270345258451A300643032 /* LocalDataManager.swift in Sources */,
+				DF27033C25844E3300643032 /* HeroListViewController.swift in Sources */,
+				DF2703482584582C00643032 /* HeroService.swift in Sources */,
 				DFCE8DED2583C51000FCA8C2 /* AppDelegate.swift in Sources */,
-				DFCE8DEF2583C51000FCA8C2 /* SceneDelegate.swift in Sources */,
+				DF27033825844D3400643032 /* HomeWireframe.swift in Sources */,
 				DFCE8DF72583C51000FCA8C2 /* DotaHero.xcdatamodeld in Sources */,
+				DF27035125847C0100643032 /* HeroViewListProtocol.swift in Sources */,
+				DF270340258450D900643032 /* Endpoint.swift in Sources */,
+				DF27034C2584755D00643032 /* HeroListPresenter.swift in Sources */,
+				DF27034A2584737E00643032 /* HeroListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +569,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DFCE8DF22583C51000FCA8C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFCE8DF32583C51000FCA8C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFCE8DFA2583C51200FCA8C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +696,7 @@
 		};
 		DFCE8E172583C51200FCA8C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF19D5ACC65242A0673D11F /* Pods-DotaHero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +714,7 @@
 		};
 		DFCE8E182583C51200FCA8C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2836C5935615F5A4758DC923 /* Pods-DotaHero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +732,7 @@
 		};
 		DFCE8E1A2583C51200FCA8C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C167BCD404DE124746DF164 /* Pods-DotaHeroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +754,7 @@
 		};
 		DFCE8E1B2583C51200FCA8C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDD897BE190B278B3F9BE66B /* Pods-DotaHeroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +776,7 @@
 		};
 		DFCE8E1D2583C51200FCA8C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C3524390419061D3BD0B72 /* Pods-DotaHero-DotaHeroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +796,7 @@
 		};
 		DFCE8E1E2583C51200FCA8C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846FAFC981F9218864FE86C1 /* Pods-DotaHero-DotaHeroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
