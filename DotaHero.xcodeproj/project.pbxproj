@@ -25,6 +25,7 @@
 		DF2703572584BAA600643032 /* HeroRoleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2703552584BAA600643032 /* HeroRoleCollectionViewCell.xib */; };
 		DF27035A2584BBD700643032 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2703582584BBD700643032 /* HeroCollectionViewCell.swift */; };
 		DF27035B2584BBD700643032 /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2703592584BBD700643032 /* HeroCollectionViewCell.xib */; };
+		DFB493E825860EE60040DF6A /* RoleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB493E725860EE60040DF6A /* RoleModel.swift */; };
 		DFCE8DED2583C51000FCA8C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */; };
 		DFCE8DF72583C51000FCA8C2 /* DotaHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */; };
 		DFCE8DF92583C51200FCA8C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCE8DF82583C51200FCA8C2 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		DF2703552584BAA600643032 /* HeroRoleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroRoleCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF2703582584BBD700643032 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF2703592584BBD700643032 /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
+		DFB493E725860EE60040DF6A /* RoleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModel.swift; sourceTree = "<group>"; };
 		DFCE8DE92583C51000FCA8C2 /* DotaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCE8DEC2583C51000FCA8C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCE8DF62583C51000FCA8C2 /* DotaHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DotaHero.xcdatamodel; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				DFCE8DF52583C51000FCA8C2 /* DotaHero.xcdatamodeld */,
 				DF2703522584805C00643032 /* HeroModel.swift */,
+				DFB493E725860EE60040DF6A /* RoleModel.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				DF27035A2584BBD700643032 /* HeroCollectionViewCell.swift in Sources */,
 				DF27035125847C0100643032 /* HeroViewListProtocol.swift in Sources */,
 				DF2703562584BAA600643032 /* HeroRoleCollectionViewCell.swift in Sources */,
+				DFB493E825860EE60040DF6A /* RoleModel.swift in Sources */,
 				DF270340258450D900643032 /* Endpoint.swift in Sources */,
 				DF27034C2584755D00643032 /* HeroListPresenter.swift in Sources */,
 				DF27034A2584737E00643032 /* HeroListInteractor.swift in Sources */,

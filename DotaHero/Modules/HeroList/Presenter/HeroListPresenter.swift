@@ -11,6 +11,7 @@ import Foundation
 protocol HeroListPresenterProtocol: class {
     // VIEW -> PRESENTER
     func viewDidLoad()
+    func getHeroesWithFilter(role:String)
 }
 
 
@@ -28,10 +29,18 @@ class HeroListPresenter: HeroListPresenterProtocol{
     func viewDidLoad() {
         self.interactor?.getDataHeroes()
     }
+    
+    func getHeroesWithFilter(role:String){
+        self.interactor?.getHeroesWithFilter(role: role)
+    }
 }
 
 
 extension HeroListPresenter: HeroListInteractorOutputProtocol {
+    func didRetrieveRoles(roleData roles: [RoleModel]) {
+        view?.showRoles(with: roles)
+    }
+    
     func didRetrieveHeroes(heroData heroes: [HeroModel]) {
         view?.showHeroes(with: heroes)
     }

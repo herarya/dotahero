@@ -17,6 +17,7 @@ class HeroListViewController: UIViewController{
     @IBOutlet weak var heroCollectionView: UICollectionView!
     
     var heroesList: [HeroModel] = []
+    var rolesList: [RoleModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,11 @@ class HeroListViewController: UIViewController{
 }
 
 extension HeroListViewController: HeroViewListProtocol {
+    func showRoles(with roles: [RoleModel]) {
+        rolesList = roles
+        heroRoleCollectionView.reloadData()
+    }
+    
     func showHeroes(with heroes: [HeroModel]) {
         print(heroes.count)
         heroesList = heroes
@@ -56,6 +62,9 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.heroRoleCollectionView {
+            return rolesList.count
+        }
         return heroesList.count
     }
     
@@ -63,6 +72,8 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
         
         if collectionView == self.heroRoleCollectionView {
             let heroRoleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroRoleCollectionViewCell", for: indexPath) as! HeroRoleCollectionViewCell
+            let role = rolesList[indexPath.row]
+            heroRoleCell.setupUI(forRole: role)
             return heroRoleCell
         }else{
             let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCollectionViewCell", for: indexPath) as! HeroCollectionViewCell
@@ -75,7 +86,8 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == self.heroRoleCollectionView {
-           return HeroRoleCollectionViewCell.cellSize(withLabel: "test")
+            let role = rolesList[indexPath.row]
+            return HeroRoleCollectionViewCell.cellSize(withLabel: role.name)
         }else if collectionView == self.heroCollectionView {
             return HeroCollectionViewCell.cellSize()
         }
@@ -83,12 +95,18 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
        
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 12
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == self.heroRoleCollectionView {
+            return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 0)
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+       if collectionView == self.heroRoleCollectionView {
+        let role = rolesList[indexPath.row]
+        presenter?.getHeroesWithFilter(role: role.name)
+       }
     }
     
 }

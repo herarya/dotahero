@@ -24,7 +24,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
     }
     
     static func cellSize() -> CGSize {
-        let padding : CGFloat = 30
+        let padding : CGFloat = 10
         let width =  UIScreen.main.bounds.width - padding
         return CGSize(width: width/2, height: 100)
     }

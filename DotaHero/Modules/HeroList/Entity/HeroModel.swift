@@ -25,6 +25,7 @@ enum HeroModelCodingKeys: String,CodingKey {
     case localizedName = "localized_name"
     case moveSpeed = "move_speed"
     case primaryAttr = "primary_attr"
+    case roles
 }
 
 
@@ -40,6 +41,7 @@ public class HeroModel: NSManagedObject, Codable{
     @NSManaged var localizedName: String
     @NSManaged var moveSpeed: Double
     @NSManaged var primaryAttr: String
+    @NSManaged var roles: [String]
 
     
     // MARK: - Encodable
@@ -53,7 +55,7 @@ public class HeroModel: NSManagedObject, Codable{
         try container.encode(localizedName, forKey: .localizedName)
         try container.encode(moveSpeed, forKey: .moveSpeed)
         try container.encode(primaryAttr, forKey: .primaryAttr)
-        
+        try container.encode(roles, forKey: .roles)
     }
     
     // MARK: - Decodable
@@ -75,7 +77,7 @@ public class HeroModel: NSManagedObject, Codable{
             self.localizedName = try container.decode(String.self, forKey: .localizedName)
             self.moveSpeed = try container.decode(Double.self, forKey: .moveSpeed)
             self.primaryAttr = try container.decode(String.self, forKey: .primaryAttr)
-
+            self.roles = try container.decode([String].self, forKey: .roles)
         } catch {
             debugPrint("erro decode")
         }
