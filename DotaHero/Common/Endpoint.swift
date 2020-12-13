@@ -9,7 +9,8 @@
 import Foundation
 
 struct API {
-    static let baseUrl = "https://api.opendota.com/api"
+    static let baseUrlApi = "https://api.opendota.com/api"
+    static let baseUrlImage = "https://api.opendota.com"
 }
 
 protocol Endpoint {
@@ -31,7 +32,7 @@ enum Endpoints {
         
         public var url: String {
             switch self {
-                case .fetchHeroes: return "\(API.baseUrl)\(path)"
+                case .fetchHeroes: return "\(API.baseUrlApi)\(path)"
             }
         }
     }

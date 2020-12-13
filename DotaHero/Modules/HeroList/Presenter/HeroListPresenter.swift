@@ -29,3 +29,12 @@ class HeroListPresenter: HeroListPresenterProtocol{
         self.interactor?.getDataHeroes()
     }
 }
+
+
+extension HeroListPresenter: HeroListInteractorOutputProtocol {
+    func didRetrieveHeroes(heroData heroes: [HeroModel]) {
+        view?.showHeroes(with: heroes)
+    }
+    
+}
+

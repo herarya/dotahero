@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="137" height="125"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anti-mage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEL-QC-ELZ">
-                        <rect key="frame" x="28" y="91" width="81" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="25" y="91" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -37,6 +37,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="137" height="125"/>
+            <connections>
+                <outlet property="heroImage" destination="lAT-93-Xtg" id="9Bz-qU-egG"/>
+                <outlet property="nameLabel" destination="jEL-QC-ELZ" id="DvD-qR-WE9"/>
+            </connections>
             <point key="canvasLocation" x="-326.81159420289856" y="-3.683035714285714"/>
         </collectionViewCell>
     </objects>

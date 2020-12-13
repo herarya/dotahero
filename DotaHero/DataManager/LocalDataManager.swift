@@ -32,11 +32,18 @@ class LocalDataManager: NSObject {
     }
     
     func fetchHeroes() -> [HeroModel]? {
+        let sortByName = NSSortDescriptor(key: "localizedName", ascending: true)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"HeroModel")
+        fetchRequest.sortDescriptors = [sortByName]
         do {
-            let heroes = try persistentContainer.viewContext.fetch(fetchRequest)
-            print(heroes.count)
-            return []
+            var heroes = [HeroModel]()
+            let results = try persistentContainer.viewContext.fetch(fetchRequest)
+            for item in results {
+                if let data = item as? HeroModel {
+                  heroes.append(data)
+                }
+            }
+            return heroes
         } catch {
             debugPrint("error fetching db heroes")
             return nil

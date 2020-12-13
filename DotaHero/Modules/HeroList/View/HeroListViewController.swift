@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroListViewController: UIViewController, HeroViewListProtocol{
+class HeroListViewController: UIViewController{
 
     
     var presenter : HeroListPresenterProtocol?
@@ -16,6 +16,7 @@ class HeroListViewController: UIViewController, HeroViewListProtocol{
     @IBOutlet weak var heroRoleCollectionView: UICollectionView!
     @IBOutlet weak var heroCollectionView: UICollectionView!
     
+    var heroesList: [HeroModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,14 @@ class HeroListViewController: UIViewController, HeroViewListProtocol{
     
 }
 
+extension HeroListViewController: HeroViewListProtocol {
+    func showHeroes(with heroes: [HeroModel]) {
+        print(heroes.count)
+        heroesList = heroes
+        heroCollectionView.reloadData()
+    }
+}
+
 
 extension HeroListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -47,7 +56,7 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return heroesList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,6 +66,8 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
             return heroRoleCell
         }else{
             let heroCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCollectionViewCell", for: indexPath) as! HeroCollectionViewCell
+            let hero = heroesList[indexPath.row]
+            heroCell.setupUI(forHero: hero)
             return heroCell
         }
         

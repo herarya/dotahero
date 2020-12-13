@@ -26,6 +26,7 @@ class HomeWireframe: HomeWireframeProtocol{
         let navigation = UINavigationController(rootViewController: view)
         view.presenter = presenter
         presenter.view = view
+        interactor.interactorOutput = presenter
         return navigation
     }
 
