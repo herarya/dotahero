@@ -35,7 +35,6 @@ class HeroListInteractor:HeroListInteractorInputProtocol{
         
         let roles = self.localDbManager.fetchRoles()
         let heroes = self.localDbManager.fetchHeroes()
-        print(roles?.count)
         guard heroes?.isEmpty == true else {
             interactorOutput?.didRetrieveHeroes(heroData: heroes!)
             interactorOutput?.didRetrieveRoles(roleData:roles!)

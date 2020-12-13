@@ -48,7 +48,6 @@ extension HeroListViewController: HeroViewListProtocol {
     }
     
     func showHeroes(with heroes: [HeroModel]) {
-        print(heroes.count)
         heroesList = heroes
         heroCollectionView.reloadData()
     }
@@ -106,6 +105,9 @@ extension HeroListViewController: UICollectionViewDelegate, UICollectionViewData
        if collectionView == self.heroRoleCollectionView {
         let role = rolesList[indexPath.row]
         presenter?.getHeroesWithFilter(role: role.name)
+       }else {
+        let hero = heroesList[indexPath.row]
+        presenter?.showPostDetail(forHero: hero)
        }
     }
     

@@ -9,7 +9,6 @@
 import Foundation
 
 protocol HeroViewListProtocol: class {
-  
    func showHeroes(with heroes: [HeroModel])
    func showRoles(with roles: [RoleModel])
 }

@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
-protocol  HomeWireframeProtocol: class {
+protocol HomeWireframeProtocol: class {
     static func createModule() -> UIViewController
+    // PRESENTER -> WIREFRAME
+    func presentHeroDetailScreen(from view: HeroViewListProtocol, forHero hero: HeroModel)
 }
 
 class HomeWireframe: HomeWireframeProtocol{
@@ -22,17 +24,22 @@ class HomeWireframe: HomeWireframeProtocol{
         let view = HeroListViewController()
         let service = HeroesService()
         let interactor = HeroListInteractor(localDbManager: localDbManager, service: service)
-        let presenter = HeroListPresenter(interactor: interactor, view: view)
+        let wireFrame: HomeWireframeProtocol = HomeWireframe()
+        let presenter = HeroListPresenter(interactor: interactor, view: view, wireFrame: wireFrame)
         let navigation = UINavigationController(rootViewController: view)
         view.presenter = presenter
         presenter.view = view
         interactor.interactorOutput = presenter
         return navigation
     }
-
     
-    static var mainstoryboard: UIStoryboard {
-        return UIStoryboard(name:"Main",bundle: Bundle.main)
+   func presentHeroDetailScreen(from view: HeroViewListProtocol, forHero hero: HeroModel) {
+      
+    let heroDetailViewController = HeroDetailWireframe.createModuleDetail(forHero: hero)
+      if let sourceView = view as? UIViewController {
+        sourceView.navigationController?.pushViewController(heroDetailViewController, animated: true)
+      }
     }
+
 }
 

@@ -25,6 +25,21 @@ class HeroRoleCollectionViewCell: UICollectionViewCell {
         let width = label.size(withAttributes: [.font: font]).width + 35
         return CGSize(width: width, height: 40)
     }
+     override var isSelected: Bool {
+        didSet{
+            if self.isSelected {
+                UIView.animate(withDuration: 0.3) { // for animation effect
+                    self.backgroundColor = UIColor.black
+                }
+            }
+            else {
+                UIView.animate(withDuration: 0.3) { // for animation effect
+                    self.backgroundColor = UIColor.systemPurple
+                }
+            }
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 5

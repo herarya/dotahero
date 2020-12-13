@@ -29,6 +29,11 @@ class HeroCollectionViewCell: UICollectionViewCell {
         return CGSize(width: width/2, height: 100)
     }
     
+    static func cellDetailSize() -> CGSize {
+       let width =  UIScreen.main.bounds.width - 30
+       return CGSize(width: width/3, height: 100)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
