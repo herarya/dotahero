@@ -52,6 +52,7 @@ class LocalDataManager: NSObject {
     
     
     func store(data: Data) {
+        print(data)
         do {
             guard let codingUserInfoKeyManagedObjectContext = CodingUserInfoKey.managedObjectContext else {
                 fatalError("Failed to retrieve context")
@@ -61,6 +62,7 @@ class LocalDataManager: NSObject {
             decoder.userInfo[codingUserInfoKeyManagedObjectContext] = managedContext
             let heroes = try decoder.decode([HeroModel].self, from: data)
             storeRole(role: "All",context: managedContext)
+            print(heroes.count)
             heroes.forEach { hero in
                 for role in hero.roles where !isRoleExist(context:managedContext,role:role) {
                     storeRole(role: role,context: managedContext)

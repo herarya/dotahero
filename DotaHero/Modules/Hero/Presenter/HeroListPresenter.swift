@@ -56,6 +56,7 @@ extension HeroListPresenter: HeroListInteractorOutputProtocol {
     }
     
     func showError(withMessage message: String) {
+        view?.hideLoading()
         view?.showError(message: message)
     }
     
