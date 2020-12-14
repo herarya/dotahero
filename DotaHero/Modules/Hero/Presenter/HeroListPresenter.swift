@@ -31,6 +31,7 @@ class HeroListPresenter: HeroListPresenterProtocol{
     }
     
     func viewDidLoad() {
+        view?.showLoading()
         self.interactor?.getDataHeroes()
     }
     
@@ -50,7 +51,12 @@ extension HeroListPresenter: HeroListInteractorOutputProtocol {
     }
     
     func didRetrieveHeroes(heroData heroes: [HeroModel]) {
+        view?.hideLoading()
         view?.showHeroes(with: heroes)
+    }
+    
+    func showError(withMessage message: String) {
+        view?.showError(message: message)
     }
     
 }

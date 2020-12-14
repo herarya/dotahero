@@ -8,6 +8,7 @@ target 'DotaHero' do
   # Pods for DotaHero
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 4.1'
+  pod 'PKHUD', '~> 5.0'
 
   target 'DotaHeroTests' do
     inherit! :search_paths

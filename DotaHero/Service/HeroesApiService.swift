@@ -13,10 +13,15 @@ import Alamofire
 public typealias onSuccessCallBack = (Data?) -> Void
 public typealias onErrorCallBack = (Error?) -> Void
 
-public class HeroesService {
+public class HeroesApiService {
     
-    func fetchHeroes(onSuccess : onSuccessCallBack?, onError : onErrorCallBack) {
+    func fetchHeroes(onSuccess : onSuccessCallBack?, onError : onErrorCallBack?) {
         NetworkManager.API.request(url: Endpoints.Heroes.fetchHeroes.url) { (data, error) in
+            if error != nil {
+                onError!(error)
+                return
+            }
+            
             guard let data = data else { return }
             onSuccess?(data)
         }

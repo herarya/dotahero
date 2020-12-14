@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class HeroListViewController: UIViewController{
 
@@ -42,6 +43,8 @@ class HeroListViewController: UIViewController{
 }
 
 extension HeroListViewController: HeroViewListProtocol {
+
+    
     func showRoles(with roles: [RoleModel]) {
         rolesList = roles
         heroRoleCollectionView.reloadData()
@@ -50,6 +53,18 @@ extension HeroListViewController: HeroViewListProtocol {
     func showHeroes(with heroes: [HeroModel]) {
         heroesList = heroes
         heroCollectionView.reloadData()
+    }
+    
+    func showError(message:String) {
+          HUD.flash(.label(message), delay: 2.0)
+    }
+    
+    func showLoading() {
+        HUD.show(.progress)
+    }
+    
+    func hideLoading() {
+        HUD.hide()
     }
 }
 

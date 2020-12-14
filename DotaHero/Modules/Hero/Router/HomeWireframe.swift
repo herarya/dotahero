@@ -22,7 +22,7 @@ class HomeWireframe: HomeWireframeProtocol{
     class func createModule() -> UIViewController {
         guard let localDbManager = (UIApplication.shared.delegate as? AppDelegate)?.localDataManager else { fatalError("error get db") }
         let view = HeroListViewController()
-        let service = HeroesService()
+        let service = HeroesApiService()
         let interactor = HeroListInteractor(localDbManager: localDbManager, service: service)
         let wireFrame: HomeWireframeProtocol = HomeWireframe()
         let presenter = HeroListPresenter(interactor: interactor, view: view, wireFrame: wireFrame)
